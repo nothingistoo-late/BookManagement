@@ -22,14 +22,9 @@ namespace BookManagement.BLL.Service
             _bookRepo.Create(obj);
         }
 
-        public void UpdateBook(Book obj)
-        {
-            _bookRepo.Update(obj);
-        }
+        public void UpdateBook(Book obj) => _bookRepo.Update(obj);
+       
 
-        public void DeleteBook(Book obj)
-        {
-            _bookRepo.Delete(obj);
-        }
+        public void DeleteBook(Book obj) => _bookRepo.Delete(obj);
     }
 }
