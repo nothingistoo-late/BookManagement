@@ -1,5 +1,6 @@
 ﻿using BookManagement.BLL.Service;
 using BookManagement.DAL.Entities;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -83,6 +84,15 @@ namespace BookManagement_HoangNgocTrinh
             {
                 Application.Current.Shutdown();
             }
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            //quantity or function has value
+            
+            // both of them has value
+            FillDataGridBook(_bookService.SearchBookByNameAndDes(BookNameTextBox.Text, DescriptionTextBox.Text));
         }
     }
 }
